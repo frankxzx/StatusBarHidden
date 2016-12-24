@@ -12,6 +12,7 @@
 		014935D71E0E672600D5117A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014935D51E0E672600D5117A /* Main.storyboard */; };
 		014935D91E0E672600D5117A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 014935D81E0E672600D5117A /* Assets.xcassets */; };
 		014935DC1E0E672600D5117A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014935DA1E0E672600D5117A /* LaunchScreen.storyboard */; };
+		014935E61E0E871300D5117A /* YLProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014935E51E0E871300D5117A /* YLProgressBar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		014935D81E0E672600D5117A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		014935DB1E0E672600D5117A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		014935DD1E0E672600D5117A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		014935E51E0E871300D5117A /* YLProgressBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YLProgressBar.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014935E61E0E871300D5117A /* YLProgressBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				014935D01E0E672600D5117A /* StateBarHidden */,
 				014935CF1E0E672600D5117A /* Products */,
+				014935E41E0E871300D5117A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +68,14 @@
 			path = StateBarHidden;
 			sourceTree = "<group>";
 		};
+		014935E41E0E871300D5117A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				014935E51E0E871300D5117A /* YLProgressBar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +86,7 @@
 				014935CA1E0E672600D5117A /* Sources */,
 				014935CB1E0E672600D5117A /* Frameworks */,
 				014935CC1E0E672600D5117A /* Resources */,
+				014935E31E0E7C3900D5117A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -131,6 +144,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		014935E31E0E7C3900D5117A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/YLProgressBar.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		014935CA1E0E672600D5117A /* Sources */ = {
@@ -260,6 +290,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JJ6D8L57PH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StateBarHidden/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -274,6 +308,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JJ6D8L57PH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StateBarHidden/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
